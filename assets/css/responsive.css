@@ -66,11 +66,27 @@
   }
   /* END FAQ */
 
-  /* START TESTIMONIALS */
-  #testimonials h2 {
+  /* START GENERAL */
+  #general h2 {
     font-size: 30px;
   }
-  /* END TESTIMONIALS */
+
+  #general .general-title .title {
+    font-size: 20px;
+  }
+  /* END GENERAL */
+
+  /* START BEST DEAL */
+  #best-deal h2 {
+    font-size: 30px;
+  }
+  /* END BEST DEAL */
+
+  /* START PROCEDURE */
+  #procedure .procedure-content h2 {
+    font-size: 30px;
+  }
+  /* END PROCEDURE */
 
   /* START FOOTER */
   #footer .col-lg-6:nth-of-type(3) {
@@ -98,9 +114,11 @@
   }
   #form .form-intro .title {
     font-size: 35px;
+    color: var(--primary-color);
   }
   #form .form-intro .desc {
     font-size: 16px;
+    color: var(--primary-color);
   }
   /* END FORM */
   /* START STEP */
@@ -139,14 +157,14 @@
 
   /* END FAQ */
 
-  /* START TESTIMONIALS */
-  #testimonials h2 {
+  /* START GENERAL */
+  #general h2 {
     font-size: 22px;
   }
 
-  #testimonials .testimonials-item .testimonials-comment {
+  #general .general-item .general-comment {
     font-size: 14px;
   }
-  /* END TESTIMONIALS */
+  /* END GENERAL */
 }
 /* END MOBILE */

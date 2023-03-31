@@ -39,8 +39,8 @@ body {
 }
 
 .wrapper {
-  background-image: url("../images/bg.png");
-  background-size: cover;
+  background-image: url("../images/bgTop.png");
+  background-size: contain;
   background-repeat: no-repeat;
   background-position: center top;
   width: 100%;
@@ -568,12 +568,12 @@ body {
 }
 /* END FAQ */
 
-/* START TESITMONIALS */
-#testimonials {
+/* START GENERAL */
+#general {
   margin: 150px 0;
 }
 
-#testimonials h2 {
+#general h2 {
   font-weight: 700;
   font-size: 40px;
   text-transform: uppercase;
@@ -587,58 +587,37 @@ body {
   color: transparent;
 }
 
-#testimonials .swiper-slide {
+#general .swiper-slide {
   display: flex;
   justify-content: center;
   align-items: center;
   margin-bottom: 80px;
 }
 
-#testimonials .testimonials-item {
+#general .general-item {
   width: 55%;
 }
 
-#testimonials .testimonials-item .testimonials-comment {
-  text-align: justify;
-}
-
-#testimonials .testimonials-profile {
+#general .general-title {
   display: flex;
   flex-direction: column;
   align-items: center;
   margin-bottom: 42px;
 }
 
-#testimonials .testimonials-img {
-  width: fit-content;
-  overflow: hidden;
-  border-radius: 100%;
-  margin-bottom: 40px;
-  width: 100px;
-  height: 100px;
-}
-
-#testimonials .testimonials-img img {
-  height: 100%;
-}
-
-#testimonials .testimonials-profile .name,
-#testimonials .testimonials-profile .address {
+#general .general-title .title {
   margin-bottom: 0;
-  font-size: 16px;
+  font-size: 30px;
+  text-align: center;
 }
 
-#testimonials .testimonials-profile .name span {
+#general .general-title .title {
   font-weight: 700;
   color: var(--primary-color);
 }
 
-#testimonials .testimonials-profile .address {
-  font-style: italic;
-}
-
-#testimonials .swiper-button-next,
-#testimonials .swiper-button-prev {
+#general .swiper-button-next,
+#general .swiper-button-prev {
   color: var(--primary-color);
   width: 48px;
   height: 48px;
@@ -647,13 +626,13 @@ body {
   border-radius: 100px;
 }
 
-#testimonials .swiper-button-next:after,
-#testimonials .swiper-button-prev:after {
+#general .swiper-button-next:after,
+#general .swiper-button-prev:after {
   font-size: 20px;
   font-weight: 700;
 }
 
-#testimonials .swiper-pagination-bullet {
+#general .swiper-pagination-bullet {
   width: 20px;
   height: 20px;
   background-color: #fff;
@@ -662,14 +641,121 @@ body {
   transition: all ease 0.3s;
 }
 
-#testimonials .swiper-pagination-bullet-active {
+#general .swiper-pagination-bullet-active {
   background-color: var(--primary-color);
 }
 
-/* END TESITMONIALS */
+/* END GENERAL */
+
+/* START BEST DEAL */
+#best-deal {
+  margin-top: 80px;
+}
+
+#best-deal h2 {
+  font-weight: 700;
+  font-size: 40px;
+  text-transform: uppercase;
+  width: 100%;
+  text-align: center;
+  margin: 35px 0 80px;
+  background: rgb(176, 85, 175);
+  background: var(--gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+
+#best-deal .best-deal-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
+  border-top: 5px solid var(--primary-color);
+  margin-bottom: 30px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+  border-radius: 10px 10px 5px 5px;
+  background-color: #fff;
+}
+
+#best-deal .best-deal-container svg {
+  background-color: var(--primary-color);
+  padding: 20px;
+  font-size: 20px;
+  border-radius: 100px;
+  color: #fff;
+}
+
+#best-deal .best-deal-container .title {
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 20px;
+  margin-bottom: 0;
+}
+
+#best-deal .best-deal-container ul {
+  padding-left: 30px;
+}
+/* END BEST DEAL */
+
+/* START PROCEDURE */
+#procedure {
+  margin-top: 80px;
+}
+
+#procedure .procedure-content {
+  padding: 20px;
+}
+
+#procedure .procedure-content h2 {
+  font-weight: 700;
+  font-size: 40px;
+  text-transform: uppercase;
+  width: 100%;
+  text-align: center;
+  margin: 35px 0 80px;
+  background: rgb(176, 85, 175);
+  background: var(--gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+
+#procedure .procedure-img {
+  width: 100%;
+}
+
+#procedure .procedure-img img {
+  width: 100%;
+  transform: rotateY(180deg);
+}
+
+#procedure .procedure-content-item {
+  display: flex;
+  gap: 15px;
+  align-items: start;
+  margin-bottom: 20px;
+}
+
+#procedure .procedure-content-item p {
+  margin-bottom: 0;
+}
+
+#procedure .procedure-content-item svg {
+  font-size: 30px;
+  color: var(--primary-color);
+}
+/* END PROCEDURE */
 
 /* START FOOTER */
 #footer {
+  background-image: url("../images/bgBottom.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  padding-top: 60px;
+  margin-top: 80px;
 }
 
 #footer .footer-logo {
