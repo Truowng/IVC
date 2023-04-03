@@ -39,6 +39,18 @@
 
   <body>
     <div class="wrapper">
+      <!-- START MODAL -->
+      <div id="modal">
+        <div class="modal-container">
+          <i class="fa-solid fa-circle-check"></i>
+          <div class="modal-text">
+            <p class="title">Thành công!</p>
+            <p class="desc">Chúc mừng bạn đã đăng kí thành công!</p>
+          </div>
+          <a href="./index.html" class="button"> Đồng ý </a>
+        </div>
+      </div>
+      <!-- END MODAL -->
       <!-- START HEADER -->
       <div id="header">
         <div class="container">
@@ -163,12 +175,9 @@
                       </div>
                     </div>
                   </div>
-                  <button onclick="myFunction()" type="submit">Đăng kí</button>
-                  <script>
-                    function myFunction() {
-                      alert("Đăng ký thành công");
-                    }
-                  </script>
+                  <button onclick="onSubmit(event)" type="submit">
+                    Đăng kí
+                  </button>
                   <a href="#" class="link">Bạn đã đăng kí?</a>
                 </div>
               </form>
