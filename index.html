@@ -107,7 +107,7 @@
                           list="legion"
                           placeholder="Chọn khu vực"
                         />
-                        <datalist id="legion">
+                        <!-- <datalist id="legion">
                           <option value="Cầu Giấy">Cầu Giấy</option>
                           <option value="Hoàn Kiếm">Hoàn Kiếm</option>
                           <option value="Hai Bà Trưng">Hai Bà Trưng</option>
@@ -120,7 +120,7 @@
                           <option value="Tây Hồ">Tây Hồ</option>
                           <option value="Ba Đình">Ba Đình</option>
                           <option value="Bắc Từ Liêm">Bắc Từ Liêm</option>
-                        </datalist>
+                        </datalist> -->
                         <div class="clear-btn" onclick="clearValue('legion')">
                           <i class="clear-icon fa-solid fa-xmark"></i>
                         </div>
@@ -138,9 +138,10 @@
                       <p class="label">Số tiền vay</p>
                       <div class="input">
                         <input
-                          type="number"
+                          type="text"
                           name="sotienvay"
                           placeholder="VD: 50 000 000"
+                          onchange="handleValue(value)"
                         />
                         <p class="unit">VND</p>
                       </div>
