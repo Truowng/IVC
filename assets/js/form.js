@@ -1,5 +1,4 @@
 const modal = document.querySelector("#modal");
-const loanInput = document.querySelector('[name="sotienvay"]');
 
 const clearValue = (name) => {
   if (name == "legion") {
@@ -10,11 +9,17 @@ const clearValue = (name) => {
   }
 };
 
-const handleValue = (value) => {
-  let result = Number(value).toLocaleString("en-US");
-  result === "NaN"
-    ? (loanInput.value = "Vui lòng nhập số")
-    : (loanInput.value = result);
+const handleValue = (event) => {
+  let loanInput = event.target.value;
+
+  loanInput = loanInput.replace(/[^\d,]/g, "");
+  loanInput.replace(",", "_");
+
+  let formatted = Number(loanInput).toLocaleString("en-US");
+  // console.log(typeof formatted);
+  // console.log(formatted);
+
+  event.target.value = formatted;
 };
 
 const onSubmit = (event) => {
