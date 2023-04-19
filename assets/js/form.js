@@ -16,8 +16,10 @@ const handleValue = (event) => {
     style: "currency",
     currency: "VND",
   });
-  event.target.value = VND.format(price);
 
+  event.target.value = VND.format(price);
+  // console.log(Number(price).toLocaleString("en-US"));
+  // event.target.value = Number(price).toLocaleString("en-US");
   // event.target.value = price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 };
 
