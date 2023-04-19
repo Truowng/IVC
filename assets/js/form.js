@@ -10,16 +10,12 @@ const clearValue = (name) => {
 };
 
 const handleValue = (event) => {
-  let loanInput = event.target.value;
-
-  loanInput = loanInput.replace(/[^\d,]/g, "");
-  loanInput.replace(",", "_");
-
-  let formatted = Number(loanInput).toLocaleString("en-US");
-  // console.log(typeof formatted);
-  // console.log(formatted);
-
-  event.target.value = formatted;
+  let price = event.target.value.replace(/[^\d,]/g, "");
+  const VND = new Intl.NumberFormat("vi-VN", {
+    style: "currency",
+    currency: "VND",
+  });
+  event.target.value = VND.format(price);
 };
 
 const onSubmit = (event) => {
