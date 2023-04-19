@@ -11,11 +11,14 @@ const clearValue = (name) => {
 
 const handleValue = (event) => {
   let price = event.target.value.replace(/[^\d,]/g, "");
+
   const VND = new Intl.NumberFormat("vi-VN", {
     style: "currency",
     currency: "VND",
   });
   event.target.value = VND.format(price);
+
+  // event.target.value = price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 };
 
 const onSubmit = (event) => {
