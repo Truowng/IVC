@@ -39,725 +39,582 @@
 
   <body>
     <div class="wrapper">
-        <!-- START MODAL -->
-        <div id="modal">
-            <div class="modal-container">
-                <i class="fa-solid fa-circle-check"></i>
-                <div class="modal-text">
-                    <p class="title">Thành công!</p>
-                    <p class="desc">Chúc mừng bạn đã đăng kí thành công!</p>
-                    <p class="desc">Nhân viên tư vấn sẽ gọi cho bạn!</p>
-                    <img class="desc" src="./assets/images/ivc.jpg" alt="">
-                </div>
-                <a href="" class="button"> Đồng ý </a>
-            </div>
+      <!-- START MODAL -->
+      <div id="modal">
+        <div class="modal-container">
+          <i class="fa-solid fa-circle-check"></i>
+          <div class="modal-text">
+            <p class="title">Thành công!</p>
+            <p class="desc">Chúc mừng bạn đã đăng kí thành công!</p>
+          </div>
+          <a href="./index.html" class="button"> Đồng ý </a>
         </div>
-        <!-- END MODAL -->
-        <!-- START HEADER -->
-        <div id="header">
-            <div class="container">
-                <div class="header-container">
-                    <div class="header-logo">
-                        <a href="#">
-                            <img src="./assets/images/IVC Logo.png" alt="logo" />
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- END HEADER -->
-
-        <!-- START FORM -->
-        <div id="form">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-6 col-sm-12">
-                        <div class="form-intro">
-                            <h1 class="title">
-                                Tư vấn vay tiêu dùng <br />
-                                <span>Online</span>
-                            </h1>
-                            <p class="desc">Không thế chấp tài sản</p>
-                            <p class="desc">Thủ tục đơn giản, nhận tiền nhanh chóng</p>
-                        </div>
-                    </div>
-                    <div class="col-lg-6 col-sm-12">
-                        <form action="/contact" method="post" class="form-container">
-                            <h1 class="title">Đăng kí khoản vay</h1>
-                            <div class="form-input-container">
-                                <div class="form-input">
-                                    <div class="form-input-item">
-                                        <p class="label">Họ tên</p>
-                                        <input type="text" name="hoten" placeholder="Họ tên" />
-                                    </div>
-                                </div>
-                                <div class="form-input">
-                                    <div class="form-input-item">
-                                        <p class="label">Số điện thoại</p>
-                                        <input type="number" name="sdt" placeholder="Số điện thoại" />
-                                    </div>
-                                    <div class="form-input-item">
-                                        <p class="label">Khu vực sinh sống</p>
-                                        <div class="input">
-                                            <input type="text" name="kv" list="legion" placeholder="Chọn khu vực" />
-                                            <!-- <datalist id="legion">
-                                                <option value="An Giang">An Giang</option>
-                                                <option value="Bà Rịa – Vũng Tàu">Bà Rịa – Vũng Tàu</option>
-                                                <option value="Bạc Liêu">Bạc Liêu</option>
-                                                <option value="Bắc Giang">Bắc Giang</option>
-                                                <option value="Bắc Kạn">Bắc Kạn</option>
-                                                <option value="Bắc Ninh">Bắc Ninh</option>
-                                                <option value="Bến Tre">Bến Tre</option>
-                                                <option value="Bình Dương">Bình Dương</option>
-                                                <option value="Bình Định">Bình Định</option>
-                                                <option value="Bình Phước">Bình Phước</option>
-                                                <option value="Bình Thuận">Bình Thuận</option>
-                                                <option value="Cà Mau">Cà Mau</option>
-                                                <option value="Cao Bằng">Cao Bằng</option>
-                                                <option value="Cần Thơ">Cần Thơ</option>
-                                                <option value="Đà Nẵng">Đà Nẵng</option>
-                                                <option value="Đắk Lắk">Đắk Lắk</option>
-                                                <option value="Đắk Nông">Đắk Nông</option>
-                                                <option value="Điện Biên">Điện Biên</option>
-                                                <option value="Đồng Nai">Đồng Nai</option>
-                                                <option value="Đồng Tháp">Đồng Tháp</option>
-                                                <option value="Gia Lai">Gia Lai</option>
-                                                <option value="Hà Giang">Hà Giang</option>
-                                                <option value="Hà Nam">Hà Nam</option>
-                                                <option value="Hà Nội">Hà Nội</option>
-                                                <option value="Hà Tĩnh">Hà Tĩnh</option>
-                                                <option value="Hải Dương">Hải Dương</option>
-                                                <option value="Hải Phòng">Hải Phòng</option>
-                                                <option value="Hậu Giang">Hậu Giang</option>
-                                                <option value="Hòa Bình">Hòa Bình</option>
-                                                <option value="Thành phố Hồ Chí Minh">Thành phố Hồ Chí Minh</option>
-                                                <option value="Hưng Yên">Hưng Yên</option>
-                                                <option value="Khánh Hòa">Khánh Hòa</option>
-                                                <option value="Kiên Giang">Kiên Giang</option>
-                                                <option value="Kon Tum">Kon Tum</option>
-                                                <option value="Lai Châu">Lai Châu</option>
-                                                <option value="Lạng Sơn">Lạng Sơn</option>
-                                                <option value="Lào Cai">Lào Cai</option>
-                                                <option value="Lâm Đồng">Lâm Đồng</option>
-                                                <option value="Long An">Long An</option>
-                                                <option value="Nam Định">Nam Định</option>
-                                                <option value="Nghệ An">Nghệ An</option>
-                                                <option value="Ninh Bình">Ninh Bình</option>
-                                                <option value="Ninh Thuận">Ninh Thuận</option>
-                                                <option value="Phú Thọ">Phú Thọ</option>
-                                                <option value="Phú Yên">Phú Yên</option>
-                                                <option value="Quảng Bình">Quảng Bình</option>
-                                                <option value="Quảng Nam">Quảng Nam</option>
-                                                <option value="Quảng Ngãi">Quảng Ngãi</option>
-                                                <option value="Quảng Ninh">Quảng Ninh</option>
-                                                <option value="Quảng Trị">Quảng Trị</option>
-                                                <option value="Sóc Trăng">Sóc Trăng</option>
-                                                <option value="Sơn La">Sơn La</option>
-                                                <option value="Tây Ninh">Tây Ninh</option>
-                                                <option value="Thái Bình">Thái Bình</option>
-                                                <option value="Thái Nguyên">Thái Nguyên</option>
-                                                <option value="Thanh Hóa">Thanh Hóa</option>
-                                                <option value="Thừa Thiên Huế">Thừa Thiên Huế</option>
-                                                <option value="Tiền Giang">Tiền Giang</option>
-                                                <option value="Trà Vinh">Trà Vinh</option>
-                                                <option value="Tuyên Quang">Tuyên Quang</option>
-                                                <option value="Vĩnh Long">Vĩnh Long</option>
-                                                <option value="Vĩnh Phúc">Vĩnh Phúc</option>
-                                                <option value="Yên Bái">Yên Bái</option>
-                                            </datalist> -->
-                                            <div class="clear-btn" onclick="clearValue('legion')">
-                                                <i class="clear-icon fa-solid fa-xmark"></i>
-                                            </div>
-                                            <div class="toggle-btn">
-                                                <i class="toggle-icon fa-solid fa-caret-up"></i>
-                                                <i class="toggle-icon active fa-solid fa-caret-down"></i>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="form-input">
-                                    <div class="form-input-item">
-                                        <p class="label">Số tiền vay</p>
-                                        <div class="input">
-                                            <input type="number" name="sotienvay" placeholder="VD: 50 000 000" />
-                                            <p class="unit">VND</p>
-                                        </div>
-                                    </div>
-                                    <div class="form-input-item">
-                                        <p class="label">Điều Kiện Vay Vốn</p>
-                                        <div class="input">
-                                            <select name="incomeType" id="income-type">
-                                                <option value="Vui lòng chọn" disabled selected>
-                                                    Vui lòng chọn
-                                                </option>
-                                                <option value="Lương công ty">Lương công ty</option>
-                                                <option value="Hộ kinh doanh">Hộ kinh doanh</option>
-                                                <option value="Công chức nhà nước">
-                                                    Công chức nhà nước
-                                                </option>
-                                                <option value="Bộ đội công an">Bộ đội công an</option>
-                                                <option value="Làm tự do">Làm tự do</option>
-                                            </select>
-                                            <div class="clear-btn" onclick="clearValue('income-type')">
-                                                <i class="clear-icon fa-solid fa-xmark"></i>
-                                            </div>
-                                            <div class="toggle-btn">
-                                                <i class="toggle-icon fa-solid fa-caret-up"></i>
-                                                <i class="toggle-icon active fa-solid fa-caret-down"></i>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <button onclick="onSubmit(event)" type="submit">
-                                    Đăng kí
-                                </button>
-                                <a href="#" class="link">Bạn đã đăng kí?</a>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- END FORM -->
-
-        <!-- START STEP -->
-        <div id="step">
-            <div class="container">
-                <h2>Đăng kí chỉ với 4 bước</h2>
-                <div class="step-list">
-                    <div class="step-container">
-                        <p class="number">1</p>
-                        <h3 class="title">
-                            <span>Đăng kí thông tin</span> & cung cấp CMND/CCCD
-                        </h3>
-                    </div>
-                    <div class="step-container">
-                        <p class="number">2</p>
-                        <h3 class="title">
-                            <span>Nhận cuộc gọi</span> tư vấn từ các chuyên gia
-                        </h3>
-                    </div>
-                    <div class="step-container">
-                        <p class="number">3</p>
-                        <h3 class="title">
-                            <span>Phê duyệt</span> hồ sơ vay trong vài phút
-                        </h3>
-                    </div>
-                    <div class="step-container">
-                        <p class="number">4</p>
-                        <h3 class="title">
-                            <span>Giải ngân tự động</span> vào tài khoản của bạn
-                        </h3>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- END STEP -->
-
-        <!-- START ADVANTAGE -->
-        <div id="advantage">
-            <div class="container">
-                <h2>ưu điểm của gói vay IVC</h2>
-                <div class="row">
-                    <div class="col-lg-6 col-sm-12">
-                        <div class="advantage-container">
-                            <div class="advantage-list">
-                                <div class="advantage-item">
-                                    <i class="fa-solid fa-scroll"></i>
-                                    <h3 class="title">thủ tục vay</h3>
-                                    <p class="desc">
-                                        Thời gian phê duyệt hồ sơ & giải ngân nhanh
-                                    </p>
-                                </div>
-                                <div class="advantage-item">
-                                    <i class="fa-solid fa-hand-holding-dollar"></i>
-                                    <h3 class="title">khoản vay</h3>
-                                    <p class="desc">Lên đến 200 triệu</p>
-                                </div>
-                                <div class="advantage-item">
-                                    <i class="fa-solid fa-house-circle-check"></i>
-                                    <h3 class="title">Chứng minh thu nhập</h3>
-                                    <p class="desc">
-                                        Không cần tài sản đảm bảo hay chứng minh thu nhập
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="advantage-list">
-                                <div class="advantage-item">
-                                    <i class="fa-solid fa-percent"></i>
-                                    <h3 class="title">lãi suất vay</h3>
-                                    <p class="desc">Chỉ từ 1.2%/tháng</p>
-                                </div>
-                                <div class="advantage-item">
-                                    <i class="fa-solid fa-calendar"></i>
-                                    <h3 class="title">kì hạn vay</h3>
-                                    <p class="desc">Lên đến 60 tháng</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-6 col-sm-0">
-                        <div class="advantage-img">
-                            <img src="./assets/images/advantage.png" alt="Ưu điểm" />
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- END ADVANTAGE -->
-
-        <!-- START FAQ -->
-        <!-- <div id="faq">
-            <div class="container">
-                <h2>Quan Hệ Đối Tác Với 13 Ngân Hàng,Tổ Chức Tín Dụng Chính Thống. Giải đáp thắc mắc trong hồ sơ vay
-                    vốn,
-                    lắng nghe, chia sẻ
-                    về lĩnh vực tài chính. Lãi Xuất 0.8%-2.5% dành cho nhiều lĩnh vực. Giải ngân nhanh chóng.</h2>
-                <h2>Thủ tục làm hồ sơ</h2>
-                <div class="faq-list">
-                    <div class="faq-item">
-                        <div class="faq-question"> -->
-        <!-- <i class="fa-regular fa-circle-question"></i> -->
-        <!-- <p>
-                                1. Giấy tờ tùy thân: Giấy CMND, hộ khẩu, giấy phép lái xe (nếu có) hoặc hộ chiếu (nếu
-                                bạn là người nước ngoài).
-                            </p> -->
-        <!-- <i class="arrow-icon fa-solid fa-angle-right"></i> -->
-        <!-- </div> -->
-        <!-- <div class="faq-answer">
-                            <p>
-                                Vay tín chấp là hình thức cho vay không cần tài sản đảm bảo
-                                (TSĐB), dựa hoàn toàn vào uy tín của khách hàng (KH) về năng
-                                lực trả nợ, để phục vụ cho nhu cầu tiêu dùng cá nhân.
-                            </p>
-                        </div> -->
-        <!-- </div>
-                    <div class="faq-item active">
-                        <div class="faq-question"> -->
-        <!-- <i class="fa-regular fa-circle-question"></i> -->
-        <!-- <p>
-                                2. Chứng minh thu nhập: Bạn cần cung cấp các bằng chứng về thu nhập như lương, tiền
-                                lương hưu, hợp đồng lao động, tài
-                                khoản ngân hàng, các khoản đầu tư hoặc thu nhập từ kinh doanh.
-                            </p> -->
-        <!-- <i class="arrow-icon fa-solid fa-angle-right"></i> -->
-        <!-- </div> -->
-        <!-- <div class="faq-answer">
-                            <p>
-                                Vay tín chấp là hình thức cho vay không cần tài sản đảm bảo
-                                (TSĐB), dựa hoàn toàn vào uy tín của khách hàng (KH) về năng
-                                lực trả nợ, để phục vụ cho nhu cầu tiêu dùng cá nhân.
-                            </p>
-                        </div> -->
-        <!-- </div>
-                    <div class="faq-item">
-                        <div class="faq-question"> -->
-        <!-- <i class="fa-regular fa-circle-question"></i> -->
-        <!-- <p>
-                                3. Hồ sơ vay tiền: Đây là bộ hồ sơ để xét duyệt vay tiền, bao gồm đơn đăng ký vay, bảng
-                                thông tin tài sản, bảng tổng hợp
-                                thu chi, chứng từ liên quan đến mục đích vay tiền (nếu có).
-                            </p> -->
-        <!-- <i class="arrow-icon fa-solid fa-angle-right"></i> -->
-        <!-- </div> -->
-        <!-- <div class="faq-answer">
-                            <p>
-                                Vay tín chấp là hình thức cho vay không cần tài sản đảm bảo
-                                (TSĐB), dựa hoàn toàn vào uy tín của khách hàng (KH) về năng
-                                lực trả nợ, để phục vụ cho nhu cầu tiêu dùng cá nhân.
-                            </p>
-                        </div> -->
-        <!-- </div>
-                    <div class="faq-item">
-                        <div class="faq-question">
-                            <i class="fa-regular fa-circle-question"></i>
-                            <p> -->
-        <!-- 4. Thông tin tài khoản ngân hàng: Bạn cần cung cấp thông tin về tài khoản ngân hàng cá
-                                nhân để nhận tiền vay.
-                            </p> -->
-        <!-- <i class="arrow-icon fa-solid fa-angle-right"></i> -->
-        <!-- </div> -->
-        <!-- <div class="faq-answer">
-                            <p>
-                                Vay tín chấp là hình thức cho vay không cần tài sản đảm bảo
-                                (TSĐB), dựa hoàn toàn vào uy tín của khách hàng (KH) về năng
-                                lực trả nợ, để phục vụ cho nhu cầu tiêu dùng cá nhân.
-                            </p>
-                        </div> -->
-        <!-- </div> -->
-        <!-- <div class="faq-item">
-                        <div class="faq-question"> -->
-        <!-- <i class="fa-regular fa-circle-question"></i> -->
-        <!-- <p>
-                                Vay tín chấp là gì? Lãi suất, thời hạn và cách trả nợ khi vay
-                                tín chấp tại ngân hàng là bao nhiêu?
-                            </p> -->
-        <!-- <i class="arrow-icon fa-solid fa-angle-right"></i> -->
-        <!-- </div> -->
-        <!-- <div class="faq-answer">
-                            <p>
-                                Vay tín chấp là hình thức cho vay không cần tài sản đảm bảo
-                                (TSĐB), dựa hoàn toàn vào uy tín của khách hàng (KH) về năng
-                                lực trả nợ, để phục vụ cho nhu cầu tiêu dùng cá nhân.
-                            </p>
-                        </div> -->
-    </div>
-    </div>
-    </div>
-    </div>
-    <!-- END FAQ -->
-
-    <!-- faq -->
-
-    <div id="faq">
+      </div>
+      <!-- END MODAL -->
+      <!-- START HEADER -->
+      <div id="header">
         <div class="container">
-            <h2>Sau khi chuẩn bị đầy đủ các giấy tờ này, bạn có thể tiến hành đăng ký vay tiền tín dụng tiêu dùng
-                tại IVCB. Quy trình
-                đăng ký thường bao gồm các bước sau:</h2>
-            <h2>Hồ Sơ Hoàn Toàn Sẽ Làm Online Nếu Được Duyệt Nhân Viên Chi Nhánh Sẽ Gặp Và Giải Ngân.</h2>
-            <div class="faq-list">
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <!-- <i class="fa-regular fa-circle-question"></i> -->
-                        <p>
-                            1. Điền đơn đăng ký vay tiền tín dụng tiêu dùng.
-                        </p>
-                        <!-- <i class="arrow-icon fa-solid fa-angle-right"></i> -->
-                    </div>
-                    <!-- <div class="faq-answer">
-                            <p>
-                                Vay tín chấp là hình thức cho vay không cần tài sản đảm bảo
-                                (TSĐB), dựa hoàn toàn vào uy tín của khách hàng (KH) về năng
-                                lực trả nợ, để phục vụ cho nhu cầu tiêu dùng cá nhân.
-                            </p>
-                        </div> -->
-                </div>
-                <div class="faq-item active">
-                    <div class="faq-question">
-                        <!-- <i class="fa-regular fa-circle-question"></i> -->
-                        <p>
-                            2. Nộp hồ sơ và các giấy tờ liên quan tại chi nhánh gần nhất.
-                        </p>
-                        <!-- <i class="arrow-icon fa-solid fa-angle-right"></i> -->
-                    </div>
-                    <!-- <div class="faq-answer">
-                            <p>
-                                Vay tín chấp là hình thức cho vay không cần tài sản đảm bảo
-                                (TSĐB), dựa hoàn toàn vào uy tín của khách hàng (KH) về năng
-                                lực trả nợ, để phục vụ cho nhu cầu tiêu dùng cá nhân.
-                            </p>
-                        </div> -->
-                </div>
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <!-- <i class="fa-regular fa-circle-question"></i> -->
-                        <p>
-                            3.Bank sẽ kiểm tra hồ sơ của bạn và liên lạc để xác nhận thông tin.
-                        </p>
-                        <!-- <i class="arrow-icon fa-solid fa-angle-right"></i> -->
-                    </div>
-                    <!-- <div class="faq-answer">
-                            <p>
-                                Vay tín chấp là hình thức cho vay không cần tài sản đảm bảo
-                                (TSĐB), dựa hoàn toàn vào uy tín của khách hàng (KH) về năng
-                                lực trả nợ, để phục vụ cho nhu cầu tiêu dùng cá nhân.
-                            </p>
-                        </div> -->
-                </div>
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <!-- <i class="fa-regular fa-circle-question"></i> -->
-                        <p>
-                            4. Nếu hồ sơ của bạn được chấp nhận, Duyệt sẽ chuyển khoản tiền vay vào tài khoản ngân
-                            hàng của bạn.
-                        </p>
-                        <!-- <i class="arrow-icon fa-solid fa-angle-right"></i> -->
-                    </div>
-                    <!-- <div class="faq-answer">
-                            <p>
-                                Vay tín chấp là hình thức cho vay không cần tài sản đảm bảo
-                                (TSĐB), dựa hoàn toàn vào uy tín của khách hàng (KH) về năng
-                                lực trả nợ, để phục vụ cho nhu cầu tiêu dùng cá nhân.
-                            </p>
-                        </div> -->
-                </div>
-                <!-- <div class="faq-item">
-                        <div class="faq-question"> -->
-                <!-- <i class="fa-regular fa-circle-question"></i> -->
-                <!-- <p>
-                                Vay tín chấp là gì? Lãi suất, thời hạn và cách trả nợ khi vay
-                                tín chấp tại ngân hàng là bao nhiêu?
-                            </p> -->
-                <!-- <i class="arrow-icon fa-solid fa-angle-right"></i> -->
-                <!-- </div> -->
-                <!-- <div class="faq-answer">
-                            <p>
-                                Vay tín chấp là hình thức cho vay không cần tài sản đảm bảo
-                                (TSĐB), dựa hoàn toàn vào uy tín của khách hàng (KH) về năng
-                                lực trả nợ, để phục vụ cho nhu cầu tiêu dùng cá nhân.
-                            </p>
-                        </div> -->
+          <div class="header-container">
+            <div class="header-logo">
+              <a href="#">
+                <img src="./assets/images/IVC Logo.png" alt="logo" />
+              </a>
             </div>
+          </div>
         </div>
-    </div>
-    </div>
+      </div>
+      <!-- END HEADER -->
 
-    <!-- end faq -->
-
-    <!-- START GENERAL -->
-    <div id="general">
+      <!-- START FORM -->
+      <div id="form">
         <div class="container">
-            <h2>giới thiệu chung</h2>
-            <div class="swiper">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                        <div class="general-item">
-                            <div class="general-title">
-                                <p class="title">Tính năng nổi bật</p>
-                            </div>
-                            <ul class="general-list">
-                                <li>
-                                    Vay nhanh không thế chấp với lãi suất linh hoạt đáp ứng
-                                    mọi nhu cầu chi tiêu nhanh chóng, thuận tiện, không cần
-                                    tài sản bảo đảm.
-                                </li>
-                                <li>
-                                    Số tiền trả hàng tháng bằng nhau, trong đó lãi theo dư nợ
-                                    giảm dần.
-                                </li>
-                                <li>Lãi suất từ 14%/năm</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="general-item">
-                            <div class="general-title">
-                                <p class="title">Lợi ích</p>
-                            </div>
-                            <ul class="general-list">
-                                <li>
-                                    Hạn mức cho vay tiêu dùng cá nhân lên đến 500 triệu đồng
-                                </li>
-                                <li>Kỳ hạn cho vay linh hoạt lên đến 60 tháng</li>
-                                <li>Thời gian phê duyệt hồ sơ và giải ngân nhanh chóng</li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div class="swiper-slide">
-                        <div class="general-item">
-                            <div class="general-title">
-                                <p class="title">Điều kiện đăng ký</p>
-                            </div>
-                            <ul class="general-list">
-                                <li>Quốc tịch: Việt Nam</li>
-                                <li>Độ tuổi: Từ 23 đến 60 tuổi</li>
-                                <li>Thu nhập: Tối thiểu 5 triệu đồng/tháng</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="general-item">
-                            <div class="general-title">
-                                <p class="title">Thủ tục đăng ký</p>
-                            </div>
-                            <ul class="general-list">
-                                <li>
-                                    Chứng minh nhân dân/ Thẻ Căn cước công dân/Hộ chiếu còn
-                                    hiệu lực
-                                </li>
-                                <li>Sổ hộ khẩu/ Giấy phép lái xe</li>
-                                <li>
-                                    Hợp đồng lao động/ Xác nhận nhân sự/ Quyết định biên chế
-                                </li>
-                                <li>Sao kê lương/ Xác nhận lương</li>
-                                <li>Giấy đề nghị vay vốn theo mẫu của IVC</li>
-                                <li>Phương án sử dụng vốn theo mẫu của IVC</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="general-item">
-                            <div class="general-title">
-                                <p class="title">Thông tin cần thiết</p>
-                            </div>
-                            <ul class="general-list">
-                                <li>
-                                    Điều kiện giao dịch chung về cho vay từng lần không tài
-                                    sản bảo đảm
-                                </li>
-                                <li>
-                                    Điều kiện giao dịch chung về cho vay thấu chi không tài
-                                    sản bảo đảm
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="swiper-pagination"></div>
-
-                <div class="swiper-button-prev"></div>
-                <div class="swiper-button-next"></div>
+          <div class="row">
+            <div class="col-lg-6 col-sm-12">
+              <div class="form-intro">
+                <h1 class="title">
+                  Vay tiền nhanh <br />
+                  <span>Online</span>
+                </h1>
+                <p class="desc">Không thế chấp tài sản</p>
+                <p class="desc">Thủ tục đơn giản, nhận tiền nhanh chóng</p>
+              </div>
             </div>
+            <div class="col-lg-6 col-sm-12">
+              <form action="/contact" method="post" class="form-container">
+                <h1 class="title">Đăng kí khoản vay</h1>
+                <div class="form-input-container">
+                  <div class="form-input">
+                    <div class="form-input-item">
+                      <p class="label">Họ tên</p>
+                      <input type="text" name="hoten" placeholder="Họ tên" />
+                    </div>
+                  </div>
+                  <div class="form-input">
+                    <div class="form-input-item">
+                      <p class="label">Số điện thoại</p>
+                      <input
+                        type="number"
+                        name="sdt"
+                        placeholder="Số điện thoại"
+                      />
+                    </div>
+                    <div class="form-input-item">
+                      <p class="label">Khu vực</p>
+                      <div class="input">
+                        <input
+                          type="text"
+                          name="kv"
+                          list="legion"
+                          placeholder="Chọn khu vực"
+                        />
+                        <!-- <datalist id="legion">
+                          <option value="Cầu Giấy">Cầu Giấy</option>
+                          <option value="Hoàn Kiếm">Hoàn Kiếm</option>
+                          <option value="Hai Bà Trưng">Hai Bà Trưng</option>
+                          <option value="Thanh Xuân">Thanh Xuân</option>
+                          <option value="Hoàng Mai">Hoàng Mai</option>
+                          <option value="Đống Đa">Đống Đa</option>
+                          <option value="Hà Đông">Hà Đông</option>
+                          <option value="Long Biên">Long Biên</option>
+                          <option value="Nam Từ Liêm">Nam Từ Liêm</option>
+                          <option value="Tây Hồ">Tây Hồ</option>
+                          <option value="Ba Đình">Ba Đình</option>
+                          <option value="Bắc Từ Liêm">Bắc Từ Liêm</option>
+                        </datalist> -->
+                        <div class="clear-btn" onclick="clearValue('legion')">
+                          <i class="clear-icon fa-solid fa-xmark"></i>
+                        </div>
+                        <div class="toggle-btn">
+                          <i class="toggle-icon fa-solid fa-caret-up"></i>
+                          <i
+                            class="toggle-icon active fa-solid fa-caret-down"
+                          ></i>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-input">
+                    <div class="form-input-item">
+                      <p class="label">Số tiền vay</p>
+                      <div class="input">
+                        <input
+                          type="text"
+                          name="sotienvay"
+                          placeholder="VD: 50 000 000"
+                          oninput="handleValue(event)"
+                        />
+                        <p class="unit">VND</p>
+                      </div>
+                    </div>
+                    <div class="form-input-item">
+                      <p class="label">Điều Kiện Vay Vốn</p>
+                      <div class="input">
+                        <select name="incomeType" id="income-type">
+                          <option value="Vui lòng chọn" disabled selected>
+                            Vui lòng chọn
+                          </option>
+                          <option value="Lương công ty">Lương công ty</option>
+                          <option value="Hộ kinh doanh">Hộ kinh doanh</option>
+                          <option value="Công chức nhà nước">
+                            Công chức nhà nước
+                          </option>
+                          <option value="Bộ đội công an">Bộ đội công an</option>
+                          <option value="Làm tự do">Làm tự do</option>
+                        </select>
+                        <div
+                          class="clear-btn"
+                          onclick="clearValue('income-type')"
+                        >
+                          <i class="clear-icon fa-solid fa-xmark"></i>
+                        </div>
+                        <div class="toggle-btn">
+                          <i class="toggle-icon fa-solid fa-caret-up"></i>
+                          <i
+                            class="toggle-icon active fa-solid fa-caret-down"
+                          ></i>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <button onclick="onSubmit(event)" type="submit">
+                    Đăng kí
+                  </button>
+                  <a href="#" class="link">Bạn đã đăng kí?</a>
+                </div>
+              </form>
+            </div>
+          </div>
         </div>
-    </div>
-    <!-- END GENERAL -->
+      </div>
+      <!-- END FORM -->
 
-    <!-- START BEST DEAL -->
-    <div id="best-deal">
+      <!-- START STEP -->
+      <div id="step">
         <div class="container">
-            <h2>Gói vay nổi bật</h2>
-            <div class="row">
-                <div class="col-lg-4 col-sm-6">
-                    <div class="best-deal-container">
-                        <i class="fa-solid fa-sack-dollar"></i>
-                        <h3 class="title">Theo lương</h3>
-                        <ul>
-                            <li>Hạn mức 20 triệu-100 triệu.</li>
-                            <li>Lãi xuất từ 0,6% đến 0,9%.</li>
-                            <li>CCCD/CMT, Bằng Lái Xe , Sao Kê Lương/Hợp đồng lao động.</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-sm-6">
-                    <div class="best-deal-container">
-                        <i class="fa-solid fa-sack-dollar"></i>
-                        <h3 class="title">kinh doanh</h3>
-                        <ul>
-                            <li>Hạn mức Hạn mức 50 triệu - 200 triệu.</li>
-                            <li>Lãi xuất từ 0,6% đến 0,9%.</li>
-                            <li>CCCD/CMT, Bằng lái xe ,GPKD/Sao kê tài khoản ngân hàng 6 tháng</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-sm-6">
-                    <div class="best-deal-container">
-                        <i class="fa-solid fa-sack-dollar"></i>
-                        <h3 class="title">thế chấp</h3>
-                        <ul>
-                            <li>Hạn mức lớn đến 900 triệu.</li>
-                            <li>Lãi xuất từ 0,6% đến 0,9%.</li>
-                            <li>CMND, SHK, sao kê lương 3 tháng gần nhất</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-sm-6">
-                    <div class="best-deal-container">
-                        <i class="fa-solid fa-sack-dollar"></i>
-                        <h3 class="title">ngành y</h3>
-                        <ul>
-                            <li>Hạn mức lớn đến 900 triệu.</li>
-                            <li>Lãi xuất từ 0,6% đến 0,9%.</li>
-                            <li>CMND, SHK, sao kê lương 3 tháng gần nhất</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-sm-6">
-                    <div class="best-deal-container">
-                        <i class="fa-solid fa-sack-dollar"></i>
-                        <h3 class="title">Tiêu dùng</h3>
-                        <ul>
-                            <li>Hạn mức 20 triệu-100 triệu.</li>
-                            <li>Lãi xuất từ 0,6% đến 0,9%.</li>
-                            <li>CCCD/CMT,Bằng lái xe, sao kê tài khoản 3 tháng</li>
-                            <li>Đăng Ký trực tiếp sim chính chủ,zalo chính chủ 30 triệu</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-sm-6">
-                    <div class="best-deal-container">
-                        <i class="fa-solid fa-sack-dollar"></i>
-                        <h3 class="title">Công An, Bộ Đội ,Giáo Viên, Bác Sĩ</h3>
-                        <ul>
-                            <li>Hạn mức Hạn Mức 50 triệu-300 triệu.</li>
-                            <li>Lãi xuất từ 0,6% đến 0,9%.</li>
-                            <li>CCCD/CMT ,Quyết Định ,Thẻ Ngành</li>
-                        </ul>
-                    </div>
-                </div>
+          <h2>Đăng kí chỉ với 4 bước</h2>
+          <div class="step-list">
+            <div class="step-container">
+              <p class="number">1</p>
+              <h3 class="title">
+                <span>Đăng kí thông tin</span> & cung cấp CMND/CCCD
+              </h3>
             </div>
+            <div class="step-container">
+              <p class="number">2</p>
+              <h3 class="title">
+                <span>Nhận cuộc gọi</span> tư vấn từ các chuyên gia
+              </h3>
+            </div>
+            <div class="step-container">
+              <p class="number">3</p>
+              <h3 class="title">
+                <span>Phê duyệt</span> hồ sơ vay trong vài phút
+              </h3>
+            </div>
+            <div class="step-container">
+              <p class="number">4</p>
+              <h3 class="title">
+                <span>Giải ngân tự động</span> vào tài khoản của bạn
+              </h3>
+            </div>
+          </div>
         </div>
-    </div>
-    <!-- END BEST DEAL -->
+      </div>
+      <!-- END STEP -->
 
-    <!-- START PROCEDURE -->
-    <div id="procedure">
+      <!-- START ADVANTAGE -->
+      <div id="advantage">
         <div class="container">
-            <div class="row">
-                <div class="col-lg-6 col-md-12">
-                    <div class="procedure-img">
-                        <img src="./assets/images/procedure.png" alt="Images" />
-                    </div>
+          <h2>ưu điểm của gói vay IVC</h2>
+          <div class="row">
+            <div class="col-lg-6 col-sm-12">
+              <div class="advantage-container">
+                <div class="advantage-list">
+                  <div class="advantage-item">
+                    <i class="fa-solid fa-scroll"></i>
+                    <h3 class="title">thủ tục vay</h3>
+                    <p class="desc">
+                      Thời gian phê duyệt hồ sơ & giải ngân nhanh
+                    </p>
+                  </div>
+                  <div class="advantage-item">
+                    <i class="fa-solid fa-hand-holding-dollar"></i>
+                    <h3 class="title">khoản vay</h3>
+                    <p class="desc">Lên đến 200 triệu</p>
+                  </div>
+                  <div class="advantage-item">
+                    <i class="fa-solid fa-house-circle-check"></i>
+                    <h3 class="title">Chứng minh thu nhập</h3>
+                    <p class="desc">
+                      Không cần tài sản đảm bảo hay chứng minh thu nhập
+                    </p>
+                  </div>
                 </div>
-                <div class="col-lg-6 col-md-12">
-                    <div class="procedure-content">
-                        <h2>Giấy tờ cần thiết</h2>
-                        <div class="procedure-content-item">
-                            <i class="fa-solid fa-id-card-clip"></i>
-                            <p>CMND/CCCD còn hiệu lực</p>
-                        </div>
-                        <div class="procedure-content-item">
-                            <i class="fa-solid fa-house-user"></i>
-                            <p>Sổ hộ khẩu thường trú</p>
-                        </div>
-                        <div class="procedure-content-item">
-                            <i class="fa-solid fa-money-check-dollar"></i>
-                            <p>
-                                Chứng minh thu nhập (HĐLĐ, phụ lục hợp đồng, quyết định nâng
-                                lương, xác nhận công tác, sao kê lương,…)
-                            </p>
-                        </div>
-                    </div>
+                <div class="advantage-list">
+                  <div class="advantage-item">
+                    <i class="fa-solid fa-percent"></i>
+                    <h3 class="title">lãi suất vay</h3>
+                    <p class="desc">Chỉ từ 1.2%/tháng</p>
+                  </div>
+                  <div class="advantage-item">
+                    <i class="fa-solid fa-calendar"></i>
+                    <h3 class="title">kì hạn vay</h3>
+                    <p class="desc">Lên đến 60 tháng</p>
+                  </div>
                 </div>
+              </div>
             </div>
+            <div class="col-lg-6 col-sm-0">
+              <div class="advantage-img">
+                <img src="./assets/images/advantage.png" alt="Ưu điểm" />
+              </div>
+            </div>
+          </div>
         </div>
-    </div>
-    <!-- END PROCEDURE -->
+      </div>
+      <!-- END ADVANTAGE -->
 
-    <!-- START FOOTER -->
-    <div id="footer">
+      <!-- START FAQ -->
+      <div id="faq">
         <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="footer-logo">
-                        <div class="footer-logo-img">
-                            <img src="./assets/images/IVC Logo.png" alt="Logo" />
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6 col-md-6 col-sm-12">
-                    <div class="footer-info">
-                        <p>
-                            <i class="fa-solid fa-location-dot"></i> Nguyễn Khánh
-                            Toàn, Cầu Giấy, Hà Nội
-                        </p>
-                        <p>
-                            <i class="fa-solid fa-phone"></i> 0879.212.638 |
-                        </p>
-                    </div>
-                </div>
-                <div class="col-lg-6 col-md-6 col-sm-12">
-                    <div class="footer-info">
-                        <p><i class="fa-solid fa-globe"></i> IVC</p>
-                    </div>
-                </div>
-                <div class="col-lg-12">
-                    <div class="copyrights">
-                        <p>© 2022. All rights reserved by IVC</p>
-                        <p>Quan Hệ Đối Tác Với 13 Ngân Hàng,Tổ Chức Tín Dụng Chính Thống. Giải đáp thắc mắc trong hồ sơ
-                            vay
-                            vốn,
-                            lắng nghe, chia sẻ
-                            về lĩnh vực tài chính. Lãi Xuất 0.8%-2.5% dành cho nhiều lĩnh vực. Giải ngân nhanh chóng.
-                        </p>
-                    </div>
-                </div>
+          <h2>các câu hỏi thường gặp</h2>
+          <div class="faq-list">
+            <div class="faq-item">
+              <div class="faq-question">
+                <i class="fa-regular fa-circle-question"></i>
+                <p>
+                  Vay tín chấp là gì? Lãi suất, thời hạn và cách trả nợ khi vay
+                  tín chấp tại ngân hàng là bao nhiêu?
+                </p>
+                <i class="arrow-icon fa-solid fa-angle-right"></i>
+              </div>
+              <div class="faq-answer">
+                <p>
+                  Vay tín chấp là hình thức cho vay không cần tài sản đảm bảo
+                  (TSĐB), dựa hoàn toàn vào uy tín của khách hàng (KH) về năng
+                  lực trả nợ, để phục vụ cho nhu cầu tiêu dùng cá nhân.
+                </p>
+              </div>
             </div>
+            <div class="faq-item active">
+              <div class="faq-question">
+                <i class="fa-regular fa-circle-question"></i>
+                <p>
+                  Vay tín chấp là gì? Lãi suất, thời hạn và cách trả nợ khi vay
+                  tín chấp tại ngân hàng là bao nhiêu?
+                </p>
+                <i class="arrow-icon fa-solid fa-angle-right"></i>
+              </div>
+              <div class="faq-answer">
+                <p>
+                  Vay tín chấp là hình thức cho vay không cần tài sản đảm bảo
+                  (TSĐB), dựa hoàn toàn vào uy tín của khách hàng (KH) về năng
+                  lực trả nợ, để phục vụ cho nhu cầu tiêu dùng cá nhân.
+                </p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <div class="faq-question">
+                <i class="fa-regular fa-circle-question"></i>
+                <p>
+                  Vay tín chấp là gì? Lãi suất, thời hạn và cách trả nợ khi vay
+                  tín chấp tại ngân hàng là bao nhiêu?
+                </p>
+                <i class="arrow-icon fa-solid fa-angle-right"></i>
+              </div>
+              <div class="faq-answer">
+                <p>
+                  Vay tín chấp là hình thức cho vay không cần tài sản đảm bảo
+                  (TSĐB), dựa hoàn toàn vào uy tín của khách hàng (KH) về năng
+                  lực trả nợ, để phục vụ cho nhu cầu tiêu dùng cá nhân.
+                </p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <div class="faq-question">
+                <i class="fa-regular fa-circle-question"></i>
+                <p>
+                  Vay tín chấp là gì? Lãi suất, thời hạn và cách trả nợ khi vay
+                  tín chấp tại ngân hàng là bao nhiêu?
+                </p>
+                <i class="arrow-icon fa-solid fa-angle-right"></i>
+              </div>
+              <div class="faq-answer">
+                <p>
+                  Vay tín chấp là hình thức cho vay không cần tài sản đảm bảo
+                  (TSĐB), dựa hoàn toàn vào uy tín của khách hàng (KH) về năng
+                  lực trả nợ, để phục vụ cho nhu cầu tiêu dùng cá nhân.
+                </p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <div class="faq-question">
+                <i class="fa-regular fa-circle-question"></i>
+                <p>
+                  Vay tín chấp là gì? Lãi suất, thời hạn và cách trả nợ khi vay
+                  tín chấp tại ngân hàng là bao nhiêu?
+                </p>
+                <i class="arrow-icon fa-solid fa-angle-right"></i>
+              </div>
+              <div class="faq-answer">
+                <p>
+                  Vay tín chấp là hình thức cho vay không cần tài sản đảm bảo
+                  (TSĐB), dựa hoàn toàn vào uy tín của khách hàng (KH) về năng
+                  lực trả nợ, để phục vụ cho nhu cầu tiêu dùng cá nhân.
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
-    </div>
-    <!-- END FOOTER -->
-    </div>
+      </div>
+      <!-- END FAQ -->
 
+      <!-- START GENERAL -->
+      <div id="general">
+        <div class="container">
+          <h2>giới thiệu chung</h2>
+          <div class="swiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="general-item">
+                  <div class="general-title">
+                    <p class="title">Tính năng nổi bật</p>
+                  </div>
+                  <ul class="general-list">
+                    <li>
+                      Vay nhanh không thế chấp với lãi suất linh hoạt đáp ứng
+                      mọi nhu cầu chi tiêu nhanh chóng, thuận tiện, không cần
+                      tài sản bảo đảm.
+                    </li>
+                    <li>
+                      Số tiền trả hàng tháng bằng nhau, trong đó lãi theo dư nợ
+                      giảm dần.
+                    </li>
+                    <li>Lãi suất từ 14%/năm</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="general-item">
+                  <div class="general-title">
+                    <p class="title">Lợi ích</p>
+                  </div>
+                  <ul class="general-list">
+                    <li>
+                      Hạn mức cho vay tiêu dùng cá nhân lên đến 500 triệu đồng
+                    </li>
+                    <li>Kỳ hạn cho vay linh hoạt lên đến 60 tháng</li>
+                    <li>Thời gian phê duyệt hồ sơ và giải ngân nhanh chóng</li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="swiper-slide">
+                <div class="general-item">
+                  <div class="general-title">
+                    <p class="title">Điều kiện đăng ký</p>
+                  </div>
+                  <ul class="general-list">
+                    <li>Quốc tịch: Việt Nam</li>
+                    <li>Độ tuổi: Từ 23 đến 60 tuổi</li>
+                    <li>Thu nhập: Tối thiểu 5 triệu đồng/tháng</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="general-item">
+                  <div class="general-title">
+                    <p class="title">Thủ tục đăng ký</p>
+                  </div>
+                  <ul class="general-list">
+                    <li>
+                      Chứng minh nhân dân/ Thẻ Căn cước công dân/Hộ chiếu còn
+                      hiệu lực
+                    </li>
+                    <li>Sổ hộ khẩu/ Giấy phép lái xe</li>
+                    <li>
+                      Hợp đồng lao động/ Xác nhận nhân sự/ Quyết định biên chế
+                    </li>
+                    <li>Sao kê lương/ Xác nhận lương</li>
+                    <li>Giấy đề nghị vay vốn theo mẫu của IVC</li>
+                    <li>Phương án sử dụng vốn theo mẫu của IVC</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="general-item">
+                  <div class="general-title">
+                    <p class="title">Thông tin cần thiết</p>
+                  </div>
+                  <ul class="general-list">
+                    <li>
+                      Điều kiện giao dịch chung về cho vay từng lần không tài
+                      sản bảo đảm
+                    </li>
+                    <li>
+                      Điều kiện giao dịch chung về cho vay thấu chi không tài
+                      sản bảo đảm
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-pagination"></div>
+
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+          </div>
+        </div>
+      </div>
+      <!-- END GENERAL -->
+
+      <!-- START BEST DEAL -->
+      <div id="best-deal">
+        <div class="container">
+          <h2>Gói vay nổi bật</h2>
+          <div class="row">
+            <div class="col-lg-4 col-sm-6">
+              <div class="best-deal-container">
+                <i class="fa-solid fa-sack-dollar"></i>
+                <h3 class="title">Theo lương</h3>
+                <ul>
+                  <li>Hạn mức lớn đến 900 triệu.</li>
+                  <li>Lãi xuất từ 0,6% đến 0,9%.</li>
+                  <li>CMND, SHK, sao kê lương 3 tháng gần nhất</li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-lg-4 col-sm-6">
+              <div class="best-deal-container">
+                <i class="fa-solid fa-sack-dollar"></i>
+                <h3 class="title">tín chấp</h3>
+                <ul>
+                  <li>Hạn mức lớn đến 900 triệu.</li>
+                  <li>Lãi xuất từ 0,6% đến 0,9%.</li>
+                  <li>CMND, SHK, sao kê lương 3 tháng gần nhất</li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-lg-4 col-sm-6">
+              <div class="best-deal-container">
+                <i class="fa-solid fa-sack-dollar"></i>
+                <h3 class="title">thế chấp</h3>
+                <ul>
+                  <li>Hạn mức lớn đến 900 triệu.</li>
+                  <li>Lãi xuất từ 0,6% đến 0,9%.</li>
+                  <li>CMND, SHK, sao kê lương 3 tháng gần nhất</li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-lg-4 col-sm-6">
+              <div class="best-deal-container">
+                <i class="fa-solid fa-sack-dollar"></i>
+                <h3 class="title">ngành y</h3>
+                <ul>
+                  <li>Hạn mức lớn đến 900 triệu.</li>
+                  <li>Lãi xuất từ 0,6% đến 0,9%.</li>
+                  <li>CMND, SHK, sao kê lương 3 tháng gần nhất</li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-lg-4 col-sm-6">
+              <div class="best-deal-container">
+                <i class="fa-solid fa-sack-dollar"></i>
+                <h3 class="title">Tiêu dùng</h3>
+                <ul>
+                  <li>Hạn mức lớn đến 900 triệu.</li>
+                  <li>Lãi xuất từ 0,6% đến 0,9%.</li>
+                  <li>CMND, SHK, sao kê lương 3 tháng gần nhất</li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-lg-4 col-sm-6">
+              <div class="best-deal-container">
+                <i class="fa-solid fa-sack-dollar"></i>
+                <h3 class="title">quân nhân</h3>
+                <ul>
+                  <li>Hạn mức lớn đến 900 triệu.</li>
+                  <li>Lãi xuất từ 0,6% đến 0,9%.</li>
+                  <li>CMND, SHK, sao kê lương 3 tháng gần nhất</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- END BEST DEAL -->
+
+      <!-- START PROCEDURE -->
+      <div id="procedure">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-6 col-md-12">
+              <div class="procedure-img">
+                <img src="./assets/images/procedure.png" alt="Images" />
+              </div>
+            </div>
+            <div class="col-lg-6 col-md-12">
+              <div class="procedure-content">
+                <h2>Giấy tờ cần thiết</h2>
+                <div class="procedure-content-item">
+                  <i class="fa-solid fa-id-card-clip"></i>
+                  <p>CMND/CCCD còn hiệu lực</p>
+                </div>
+                <div class="procedure-content-item">
+                  <i class="fa-solid fa-house-user"></i>
+                  <p>Sổ hộ khẩu thường trú</p>
+                </div>
+                <div class="procedure-content-item">
+                  <i class="fa-solid fa-money-check-dollar"></i>
+                  <p>
+                    Chứng minh thu nhập (HĐLĐ, phụ lục hợp đồng, quyết định nâng
+                    lương, xác nhận công tác, sao kê lương,…)
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- END PROCEDURE -->
+
+      <!-- START FOOTER -->
+      <div id="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-12">
+              <div class="footer-logo">
+                <div class="footer-logo-img">
+                  <img src="./assets/images/IVC Logo.png" alt="Logo" />
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-12">
+              <div class="footer-info">
+                <p>
+                  <i class="fa-solid fa-location-dot"></i> 110 Nguyễn Khánh
+                  Toàn, Cầu Giấy, Hà Nội
+                </p>
+                <p>
+                  <i class="fa-solid fa-phone"></i> 0879.212.638 | 087.667.1994
+                </p>
+              </div>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-12">
+              <div class="footer-info">
+                <p><i class="fa-solid fa-globe"></i> IVC</p>
+              </div>
+            </div>
+            <div class="col-lg-12">
+              <div class="copyrights">
+                <p>© 2022. All rights reserved by IVC</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- END FOOTER -->
+    </div>
 
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
