@@ -19,4 +19,5 @@ const handleValue = (event) => {
 
 const onSubmit = (event) => {
   modal.style.display = 'flex';
+  event.preventDefault();
 };
