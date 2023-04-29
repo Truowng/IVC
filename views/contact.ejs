@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta property="og:image" content="/images/web.jpg" />
+    <meta property="og:title" content="Tư Vấn tiêu dùng IVC" />
+    <link rel="icon" type="image/x-icon" href="/images/ivc icon.png" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+      integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+    />
+
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/responsive.css" />
+
+    <title>Tư Vấn tiêu dùng IVC</title>
+  </head>
+
+  <body>
+    <div class="wrapper">
+      <!-- START MODAL -->
+      <div id="modal">
+        <div class="modal-container">
+          <i class="fa-solid fa-circle-check"></i>
+          <div class="modal-text">
+            <p class="title">Thành công!</p>
+            <p class="desc">Chúc mừng bạn đã đăng kí thành công!</p>
+            <p class="desc">Nhân viên tư vấn sẽ gọi cho bạn!</p>
+            <img class="desc" src="/images/ivc.jpg" alt="" />
+          </div>
+          <a href="" class="button"> Đồng ý </a>
+        </div>
+      </div>
+      <!-- END MODAL -->
+      <!-- START HEADER -->
+      <div id="header">
+        <div class="container">
+          <div class="header-container">
+            <div class="header-logo">
+              <a href="#">
+                <img src="/images/IVC Logo.png" alt="logo" />
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- END HEADER -->
+
+      <!-- START FORM -->
+      <div id="form">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-6 col-sm-12">
+              <div class="form-intro">
+                <h1 class="title">
+                  Tư vấn vay <br />
+                  tiêu dùng <br />
+                  <span>Online</span>
+                </h1>
+                <p class="desc">Không thế chấp tài sản</p>
+                <p class="desc">Thủ tục đơn giản, nhận tiền nhanh chóng</p>
+              </div>
+            </div>
+            <div class="col-lg-6 col-sm-12">
+              <form action="/contact" method="post" class="form-container">
+                <h1 class="title">Đăng kí khoản vay</h1>
+                <div class="form-input-container">
+                  <div class="form-input">
+                    <div class="form-input-item">
+                      <p class="label">Họ tên</p>
+                      <input type="text" name="hoten" placeholder="Họ tên" />
+                    </div>
+                  </div>
+                  <div class="form-input">
+                    <div class="form-input-item">
+                      <p class="label">Số điện thoại</p>
+                      <input
+                        type="number"
+                        name="sdt"
+                        placeholder="Số điện thoại"
+                      />
+                    </div>
+                    <div class="form-input-item">
+                      <p class="label">Khu vực sinh sống</p>
+                      <div class="input">
+                        <input type="text" name="kv" placeholder="Khu vực" />
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-input">
+                    <div class="form-input-item">
+                      <p class="label">Số tiền vay</p>
+                      <div class="input">
+                        <input
+                          type="text"
+                          name="sotienvay"
+                          placeholder="VD: 50 000 000"
+                          oninput="handleValue(event)"
+                        />
+                        <p class="unit">VND</p>
+                      </div>
+                    </div>
+                    <div class="form-input-item">
+                      <p class="label">Điều kiện vay vốn</p>
+                      <div class="input">
+                        <select name="incomeType" id="income-type">
+                          <option value="Vui lòng chọn" disabled selected>
+                            Vui lòng chọn
+                          </option>
+                          <option value="Lương công ty">Lương công ty</option>
+                          <option value="Hộ kinh doanh">Hộ kinh doanh</option>
+                          <option value="Công chức nhà nước">
+                            Công chức nhà nước
+                          </option>
+                          <option value="Bộ đội công an">Bộ đội công an</option>
+                          <option value="Làm tự do">Làm tự do</option>
+                        </select>
+                        <div
+                          class="clear-btn"
+                          onclick="clearValue('income-type')"
+                        >
+                          <i class="clear-icon fa-solid fa-xmark"></i>
+                        </div>
+                        <div class="toggle-btn">
+                          <i class="toggle-icon fa-solid fa-caret-up"></i>
+                          <i
+                            class="toggle-icon active fa-solid fa-caret-down"
+                          ></i>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <button onclick="onSubmit(event)" type="submit">
+                    Đăng kí
+                  </button>
+                  <a href="#" class="link">Bạn đã đăng kí?</a>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- END FORM -->
+
+      <!-- START STEP -->
+      <div id="step">
+        <div class="container">
+          <h2>Đăng kí chỉ với 4 bước</h2>
+          <div class="step-list">
+            <div class="step-container">
+              <p class="number">1</p>
+              <h3 class="title">
+                <span>Đăng kí thông tin</span> & cung cấp CMND/CCCD
+              </h3>
+            </div>
+            <div class="step-container">
+              <p class="number">2</p>
+              <h3 class="title">
+                <span>Nhận cuộc gọi</span> tư vấn từ các chuyên gia
+              </h3>
+            </div>
+            <div class="step-container">
+              <p class="number">3</p>
+              <h3 class="title">
+                <span>Phê duyệt</span> hồ sơ vay trong vài phút
+              </h3>
+            </div>
+            <div class="step-container">
+              <p class="number">4</p>
+              <h3 class="title">
+                <span>Giải ngân tự động</span> vào tài khoản của bạn
+              </h3>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- END STEP -->
+
+      <!-- START ADVANTAGE -->
+      <div id="advantage">
+        <div class="container">
+          <h2>ưu điểm của gói vay IVC</h2>
+          <div class="row">
+            <div class="col-lg-6 col-sm-12">
+              <div class="advantage-container">
+                <div class="advantage-list">
+                  <div class="advantage-item">
+                    <i class="fa-solid fa-scroll"></i>
+                    <h3 class="title">thủ tục vay</h3>
+                    <p class="desc">
+                      Thời gian phê duyệt hồ sơ & giải ngân nhanh
+                    </p>
+                  </div>
+                  <div class="advantage-item">
+                    <i class="fa-solid fa-hand-holding-dollar"></i>
+                    <h3 class="title">khoản vay</h3>
+                    <p class="desc">Lên đến 200 triệu</p>
+                  </div>
+                  <div class="advantage-item">
+                    <i class="fa-solid fa-house-circle-check"></i>
+                    <h3 class="title">Chứng minh thu nhập</h3>
+                    <p class="desc">
+                      Không cần tài sản đảm bảo hay chứng minh thu nhập
+                    </p>
+                  </div>
+                </div>
+                <div class="advantage-list">
+                  <div class="advantage-item">
+                    <i class="fa-solid fa-percent"></i>
+                    <h3 class="title">lãi suất vay</h3>
+                    <p class="desc">Chỉ từ 1.2%/tháng</p>
+                  </div>
+                  <div class="advantage-item">
+                    <i class="fa-solid fa-calendar"></i>
+                    <h3 class="title">kì hạn vay</h3>
+                    <p class="desc">Lên đến 60 tháng</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6 col-sm-0">
+              <div class="advantage-img">
+                <img src="/images/advantage.png" alt="Ưu điểm" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- END ADVANTAGE -->
+
+      <!-- faq -->
+
+      <div id="faq">
+        <div class="container">
+          <h2>
+            Sau khi chuẩn bị đầy đủ các giấy tờ này, bạn có thể tiến hành đăng
+            ký vay tiền tín dụng tiêu dùng tại IVCB. Quy trình đăng ký thường
+            bao gồm các bước sau:
+          </h2>
+          <h2>
+            Hồ Sơ Hoàn Toàn Sẽ Làm Online Nếu Được Duyệt Nhân Viên Chi Nhánh Sẽ
+            Gặp Và Giải Ngân.
+          </h2>
+          <div class="faq-list">
+            <div class="faq-item">
+              <div class="faq-question">
+                <p>1. Điền đơn đăng ký vay tiền tín dụng tiêu dùng.</p>
+              </div>
+            </div>
+            <div class="faq-item active">
+              <div class="faq-question">
+                <p>
+                  2. Nộp hồ sơ và các giấy tờ liên quan tại chi nhánh gần nhất.
+                </p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <div class="faq-question">
+                <p>
+                  3. Bank sẽ kiểm tra hồ sơ của bạn và liên lạc để xác nhận
+                  thông tin.
+                </p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <div class="faq-question">
+                <p>
+                  4. Nếu hồ sơ của bạn được chấp nhận, Duyệt sẽ chuyển khoản
+                  tiền vay vào tài khoản ngân hàng của bạn.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- end faq -->
+
+    <!-- START GENERAL -->
+    <div id="general">
+      <div class="container">
+        <h2>giới thiệu chung</h2>
+        <div class="swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="general-item">
+                <div class="general-title">
+                  <p class="title">Tính năng nổi bật</p>
+                </div>
+                <ul class="general-list">
+                  <li>
+                    Vay nhanh không thế chấp với lãi suất linh hoạt đáp ứng mọi
+                    nhu cầu chi tiêu nhanh chóng, thuận tiện, không cần tài sản
+                    bảo đảm.
+                  </li>
+                  <li>
+                    Số tiền trả hàng tháng bằng nhau, trong đó lãi theo dư nợ
+                    giảm dần.
+                  </li>
+                  <li>Lãi suất từ 14%/năm</li>
+                </ul>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="general-item">
+                <div class="general-title">
+                  <p class="title">Lợi ích</p>
+                </div>
+                <ul class="general-list">
+                  <li>
+                    Hạn mức cho vay tiêu dùng cá nhân lên đến 500 triệu đồng
+                  </li>
+                  <li>Kỳ hạn cho vay linh hoạt lên đến 60 tháng</li>
+                  <li>Thời gian phê duyệt hồ sơ và giải ngân nhanh chóng</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="general-item">
+                <div class="general-title">
+                  <p class="title">Điều kiện đăng ký</p>
+                </div>
+                <ul class="general-list">
+                  <li>Quốc tịch: Việt Nam</li>
+                  <li>Độ tuổi: Từ 23 đến 60 tuổi</li>
+                  <li>Thu nhập: Tối thiểu 5 triệu đồng/tháng</li>
+                </ul>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="general-item">
+                <div class="general-title">
+                  <p class="title">Thủ tục đăng ký</p>
+                </div>
+                <ul class="general-list">
+                  <li>
+                    Chứng minh nhân dân/ Thẻ Căn cước công dân/Hộ chiếu còn hiệu
+                    lực
+                  </li>
+                  <li>Sổ hộ khẩu/ Giấy phép lái xe</li>
+                  <li>
+                    Hợp đồng lao động/ Xác nhận nhân sự/ Quyết định biên chế
+                  </li>
+                  <li>Sao kê lương/ Xác nhận lương</li>
+                  <li>Giấy đề nghị vay vốn theo mẫu của IVC</li>
+                  <li>Phương án sử dụng vốn theo mẫu của IVC</li>
+                </ul>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="general-item">
+                <div class="general-title">
+                  <p class="title">Thông tin cần thiết</p>
+                </div>
+                <ul class="general-list">
+                  <li>
+                    Điều kiện giao dịch chung về cho vay từng lần không tài sản
+                    bảo đảm
+                  </li>
+                  <li>
+                    Điều kiện giao dịch chung về cho vay thấu chi không tài sản
+                    bảo đảm
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-pagination"></div>
+
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+        </div>
+      </div>
+    </div>
+    <!-- END GENERAL -->
+
+    <!-- START BEST DEAL -->
+    <div id="best-deal">
+      <div class="container">
+        <h2>Gói vay nổi bật</h2>
+        <div class="row">
+          <div class="col-lg-4 col-sm-6">
+            <div class="best-deal-container">
+              <i class="fa-solid fa-sack-dollar"></i>
+              <h3 class="title">Theo lương</h3>
+              <ul>
+                <li>Hạn mức 20 triệu-100 triệu.</li>
+                <li>Lãi xuất từ 0,6% đến 0,9%.</li>
+                <li>CCCD/CMT, Bằng Lái Xe , Sao Kê Lương/Hợp đồng lao động.</li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-lg-4 col-sm-6">
+            <div class="best-deal-container">
+              <i class="fa-solid fa-sack-dollar"></i>
+              <h3 class="title">kinh doanh</h3>
+              <ul>
+                <li>Hạn mức Hạn mức 50 triệu - 200 triệu.</li>
+                <li>Lãi xuất từ 0,6% đến 0,9%.</li>
+                <li>
+                  CCCD/CMT, Bằng lái xe ,GPKD/Sao kê tài khoản ngân hàng 6 tháng
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-lg-4 col-sm-6">
+            <div class="best-deal-container">
+              <i class="fa-solid fa-sack-dollar"></i>
+              <h3 class="title">thế chấp</h3>
+              <ul>
+                <li>Hạn mức lớn đến 900 triệu.</li>
+                <li>Lãi xuất từ 0,6% đến 0,9%.</li>
+                <li>CMND, SHK, sao kê lương 3 tháng gần nhất</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-sm-6">
+            <div class="best-deal-container">
+              <i class="fa-solid fa-sack-dollar"></i>
+              <h3 class="title">Tiêu dùng</h3>
+              <ul>
+                <li>Hạn mức 20 triệu-100 triệu.</li>
+                <li>Lãi xuất từ 0,6% đến 0,9%.</li>
+                <li>CCCD/CMT,Bằng lái xe, sao kê tài khoản 3 tháng</li>
+                <li>Đăng Ký trực tiếp sim chính chủ,zalo chính chủ 30 triệu</li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-lg-4 col-sm-6">
+            <div class="best-deal-container">
+              <i class="fa-solid fa-sack-dollar"></i>
+              <h3 class="title">Công An, Bộ Đội ,Giáo Viên, Bác Sĩ</h3>
+              <ul>
+                <li>Hạn mức Hạn Mức 50 triệu-300 triệu.</li>
+                <li>Lãi xuất từ 0,6% đến 0,9%.</li>
+                <li>CCCD/CMT ,Quyết Định ,Thẻ Ngành</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- END BEST DEAL -->
+
+    <!-- START PROCEDURE -->
+    <div id="procedure">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6 col-md-12">
+            <div class="procedure-img">
+              <img src="/images/procedure.png" alt="Images" />
+            </div>
+          </div>
+          <div class="col-lg-6 col-md-12">
+            <div class="procedure-content">
+              <h2>Giấy tờ cần thiết</h2>
+              <div class="procedure-content-item">
+                <i class="fa-solid fa-id-card-clip"></i>
+                <p>CMND/CCCD còn hiệu lực</p>
+              </div>
+              <div class="procedure-content-item">
+                <i class="fa-solid fa-house-user"></i>
+                <p>Sổ hộ khẩu thường trú</p>
+              </div>
+              <div class="procedure-content-item">
+                <i class="fa-solid fa-money-check-dollar"></i>
+                <p>
+                  Chứng minh thu nhập (HĐLĐ, phụ lục hợp đồng, quyết định nâng
+                  lương, xác nhận công tác, sao kê lương,…)
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- END PROCEDURE -->
+
+    <!-- START FOOTER -->
+    <div id="footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="footer-logo">
+              <div class="footer-logo-img">
+                <img src="/images/IVC Logo.png" alt="Logo" />
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6 col-md-6 col-sm-12">
+            <div class="footer-info">
+              <p>
+                <i class="fa-solid fa-location-dot"></i> Nguyễn Khánh Toàn, Cầu
+                Giấy, Hà Nội
+              </p>
+              <p><i class="fa-solid fa-phone"></i> 0879.212.638 |</p>
+            </div>
+          </div>
+          <div class="col-lg-6 col-md-6 col-sm-12">
+            <div class="footer-info">
+              <p><i class="fa-solid fa-globe"></i> IVC</p>
+            </div>
+          </div>
+          <div class="col-lg-12">
+            <div class="copyrights">
+              <p>© 2022. All rights reserved by IVC</p>
+              <p>
+                Quan Hệ Đối Tác Với 13 Ngân Hàng,Tổ Chức Tín Dụng Chính Thống.
+                Giải đáp thắc mắc trong hồ sơ vay vốn, lắng nghe, chia sẻ về
+                lĩnh vực tài chính. Lãi Xuất 0.8%-2.5% dành cho nhiều lĩnh vực.
+                Giải ngân nhanh chóng.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- END FOOTER -->
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/js/all.min.js"
+      integrity="sha512-2bMhOkE/ACz21dJT8zBOMgMecNxx0d37NND803ExktKiKdSzdwn+L7i9fdccw/3V06gM/DBWKbYmQvKMdAA9Nw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script src="/js/form.js"></script>
+    <script src="/js/faq.js"></script>
+    <script src="/js/general.js"></script>
+  </body>
+</html>
