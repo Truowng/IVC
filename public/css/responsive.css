@@ -107,8 +107,7 @@
   }
   /* END HEADER */
   /* START FORM */
-  #form .form-input:nth-child(2),
-  #form .form-input:nth-child(3) {
+  #form .form-input {
     flex-direction: column;
     gap: 30px;
   }

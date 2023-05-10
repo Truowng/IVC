@@ -15,7 +15,7 @@
 }
 
 body {
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
 
 @keyframes jellyIn {
@@ -39,7 +39,7 @@ body {
 }
 
 .wrapper {
-  background-image: url('../images/bgTop.png');
+  background-image: url("../images/bgTop.png");
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center top;
@@ -219,8 +219,8 @@ body {
 }
 
 #form .form-container::after {
-  content: '';
-  background-image: url('../images/feather.svg');
+  content: "";
+  background-image: url("../images/feather.svg");
   background-size: 100%;
   background-position: center;
   background-repeat: no-repeat;
@@ -254,8 +254,7 @@ body {
   margin: 20px 0;
 }
 
-#form .form-input:nth-child(2),
-#form .form-input:nth-child(3) {
+#form .form-input {
   display: flex;
   gap: 15px;
 }
@@ -376,7 +375,7 @@ body {
   padding: 0 5px;
 }
 
-#form .form-input-container button[type='submit'] {
+#form .form-input-container button[type="submit"] {
   outline: none;
   border: 2px solid transparent;
   background: rgb(176, 85, 175);
@@ -392,7 +391,7 @@ body {
   transition: all ease 0.3s;
 }
 
-#form .form-input-container button[type='submit']:hover {
+#form .form-input-container button[type="submit"]:hover {
   border: 2px solid var(--primary-color);
   background: transparent;
   color: var(--primary-color);
@@ -840,7 +839,7 @@ body {
 
 /* START FOOTER */
 #footer {
-  background-image: url('../images/bgBottom.png');
+  background-image: url("../images/bgBottom.png");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center bottom;
