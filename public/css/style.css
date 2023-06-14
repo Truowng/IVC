@@ -57,6 +57,7 @@ body {
   width: 80px;
   border-radius: 150px;
   overflow: hidden;
+  z-index: 9999;
 }
 
 .zaloo {
@@ -269,8 +270,8 @@ body {
   margin: 20px 0;
 }
 
-#form .form-input:nth-child(2),
-#form .form-input:nth-child(3) {
+#form .form-input:nth-child(3),
+#form .form-input:nth-child(4) {
   display: flex;
   gap: 15px;
 }
