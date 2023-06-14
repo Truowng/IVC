@@ -48,6 +48,21 @@ body {
   height: fit-content;
 }
 
+/* zalo */
+#zalo {
+  bottom: 0;
+  right: 0;
+  position: fixed;
+  display: block;
+  width: 80px;
+  border-radius: 150px;
+  overflow: hidden;
+}
+
+.zaloo {
+  width: 100%;
+}
+
 /* START MODAL */
 #modal {
   position: fixed;
